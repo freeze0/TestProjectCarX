@@ -2,5 +2,5 @@
 Library
 Logs
 UserSettings
-TestProjectCarX.sln
-TestProjectCarXClone.sln
+*.sln
+*.csproj
