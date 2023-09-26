@@ -1,13 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
-public class MyClass
-{
-    public int i;
-    public int j;
-}
+
+
 
 public class TestScripts : MonoBehaviour
 {
@@ -16,7 +14,7 @@ public class TestScripts : MonoBehaviour
         short s = 0;
         long l = long.MaxValue;
         int i = 0;
-        float f = 0;
+        //float f = 0;
         double d = 0;
         object o = d;
         double d2 = (double)o;
@@ -28,14 +26,15 @@ public class TestScripts : MonoBehaviour
 
         List<int> list = new List<int>(); // обычный массив "под капотом", если будем добавл€ть новый объект, то удалит все старые данные и впишет данные в новый,
                                           // расширенный массив, скопировав данные, лучше сразу указывать capacity, аллоцирование пам€ти
-
         TestFunc(ref i);
 
-        MyClass mc = new MyClass(); // создание класса 
+       /* MyClass mc = new MyClass(); // создание класса */
 
-        var gf = mc;
+        var gf = s;
 
         Debug.Log($"short:{short.MinValue} - {short.MaxValue}");
+
+        Debug.Log("12");
 
     }
 
@@ -46,9 +45,13 @@ public class TestScripts : MonoBehaviour
         Debug.Log(i);
     }
 
-    public void TestFunc(MyClass mc)
+    /*public void TestFunc(MyClass mc)
     {
         mc.i = 1;
         mc.j = 2;
-    }
+    }*/
+    
+
+
+
 }
