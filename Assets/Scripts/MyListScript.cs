@@ -7,111 +7,7 @@ using UnityEngine;
 
 public class MyListScript : MonoBehaviour
 {
-    /*public class MyListStatic
-    {
-        private static int m_capacity;
-        private int m_count;
-        private int[] m_array = new int[m_capacity];
-                                                     
-        public int Count
-        {
-            get
-            {
-                return m_count;
-            }
-            set
-            {
-                if (value <= m_capacity)
-                {
-                    this.m_count = value;
-                }
-                else
-                {
-                    throw new Exception("Invalid count");
-                }
 
-            }
-        }
-
-        public int Capacity
-        {
-            get
-            {
-                return m_capacity;
-            }
-            *//*set
-            {
-                this.m_capacity = value;
-            }*//*
-        }
-
-        public MyListStatic()
-        {
-            m_capacity = 10; // äåôîëòíîå çíà÷åíèå
-        }
-
-        public MyListStatic(int capacity)
-        {
-            m_capacity = capacity;
-        }
-
-        public int this[int index]
-        {
-            get
-            {
-                return m_array[index];
-            }
-            set
-            {
-                m_array[index] = value;
-            }
-        }
-
-        public void Add(int item)
-        {
-            m_count++;
-            if (m_count <= m_capacity) 
-            {
-                m_array.Append(item);
-            }
-            else 
-            {
-                m_count--;
-                throw new Exception("Invalid count");
-            }
-
-        }
-
-        public void Insert(int index, int item) // capacity íóæíî àâòîìàòè÷åñêè ðàñøèðÿòü?
-        {
-
-        }
-
-        public int IndexOf(int item)
-        {
-            return -1;
-        }
-
-        public bool Remove(int item)
-        {
-            return false;
-        }
-
-        public void RemoveAt(int index)
-        {
-
-        }
-
-        public bool Contains(int item)
-        {
-            return false;
-        }
-
-        public void Clear()
-        {
-
-        }
-    }*/
 
     public class MyList
     {
@@ -326,6 +222,7 @@ public class MyListScript : MonoBehaviour
         {
             Debug.Log(myList[i]);
         }
+
     }
 
 }

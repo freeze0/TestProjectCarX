@@ -1,16 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 
 
+
+public class MyClass<TItem>
+{
+    private TItem[] m_array = new TItem[10];
+
+    public void Insert(TItem[] item)
+    {
+
+    }
+
+}
 
 
 public class TestScripts : MonoBehaviour
 {
     void Start()
     {
+        System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
         short s = 0;
         long l = long.MaxValue;
         int i = 0;
@@ -32,17 +45,36 @@ public class TestScripts : MonoBehaviour
 
         var gf = s;
 
-        Debug.Log($"short:{short.MinValue} - {short.MaxValue}");
+        //Debug.Log($"short:{short.MinValue} - {short.MaxValue}");
 
-        Debug.Log("12");
+        //Debug.Log("12");
 
+        MyClass<uint> mc = new MyClass<uint>();
+
+        TestFunc<int>(ref i);
+
+        //sw = .StartNew();
+
+        for (int j = 0; j < 100000; j++)
+        {
+            //myList.Push(new MyClass());
+        }
+
+        List<int> standartList = new List<int>();
+        //Debug.Log("Stopwatch");
     }
+    
 
     public void TestFunc(/* in / out */ ref int i) // in передает значение из имеющихся, ref позволяет изменить имеющуюся переменную создадим новую копию положим 10,
                                                    // out обязаны что то сделать с переменной
     {
         i = 10;
-        Debug.Log(i);
+        //Debug.Log(i);
+    }
+
+    public void TestFunc<T>(ref T i) where T: struct
+    {
+
     }
 
     /*public void TestFunc(MyClass mc)
