@@ -47,7 +47,7 @@ public class MyListScript : MonoBehaviour
 
         public MyListStatic()
         {
-            m_capacity = 10; // дефолтное значение
+            m_capacity = 10; // Г¤ГҐГґГ®Г«ГІГ­Г®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ
         }
 
         public MyListStatic(int capacity)
@@ -82,7 +82,7 @@ public class MyListScript : MonoBehaviour
 
         }
 
-        public void Insert(int index, int item) // capacity нужно автоматически расширять?
+        public void Insert(int index, int item) // capacity Г­ГіГ¦Г­Г® Г ГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГЁ Г°Г Г±ГёГЁГ°ГїГІГј?
         {
 
         }
@@ -292,12 +292,22 @@ public class MyListScript : MonoBehaviour
 
         public bool Contains(int item)
         {
+            for (int i = 0; i < m_array.Length; i++) 
+            {
+                if (m_array[i] == item) 
+                {
+                    return true;
+                }
+            }
             return false;
         }
 
         public void Clear()
         {
-
+            for (int i = 0; i < m_array.Length; i++)
+            {
+                m_array[i] = 0;
+            }
         }
     }
 
