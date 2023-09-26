@@ -247,7 +247,7 @@ public class MyListScript : MonoBehaviour
                     return i;
                 }
             }
-            throw new Exception("Wrong index");
+            throw new Exception("Wrong index"); //убрать это, заменить на return
         }
 
         public void Remove(int item)
