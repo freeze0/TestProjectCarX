@@ -11,7 +11,7 @@ public class MyListScript : MonoBehaviour
 
     public class MyClass
     { 
-        private int[] m_array = new int[10]; // была проблема с capacity если оставить пустым
+        private int[] m_array = new int[10];
 
         public int Count { get; private set; }
 
@@ -19,7 +19,7 @@ public class MyListScript : MonoBehaviour
         {
             get
             {
-                return m_array.Length; // здесь была ошибка NullReferenceException
+                return m_array.Length;
             }
             set
             {
@@ -283,11 +283,11 @@ public class MyListScript : MonoBehaviour
             }
         }
 
-        /*public int IndexOf(TItem item)
+        public int IndexOf(TItem item)
         {
             for (int i = 0; i < m_array.Length; i++)
             {
-                if (m_array[i] == item)
+                if (m_array[i].Equals(item))
                 {
                     return i;
                 }
@@ -301,7 +301,7 @@ public class MyListScript : MonoBehaviour
             bool flag = false;
             for (int i = 0; i < _m_count; i++)
             {
-                if (m_array[i] == item)
+                if (m_array[i].Equals(item))
                 {
                     Count--;
                     m_array[i] = m_array[i + 1];
@@ -316,7 +316,7 @@ public class MyListScript : MonoBehaviour
                     m_array[i] = default;
                 }
             }
-        }*/
+        }
 
         public void RemoveAt(int index)
         {
@@ -335,10 +335,10 @@ public class MyListScript : MonoBehaviour
             }
         }
 
-        /*public bool Contains(TItem item)
+        public bool Contains(TItem item)
         {
             return IndexOf(item) >= 0;
-        }*/
+        }
 
         public void Clear()
         {
