@@ -4,3 +4,4 @@ Logs
 UserSettings
 *.sln
 *.csproj
+.vs
